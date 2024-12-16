@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoring Sensor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>Monitoring Status Sensor MPU</header>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Highlight Section -->
+        <div class="highlight">
+          <canvas id="realtimeChart" width="400" height="200"></canvas>
+          <div class="highlight-row">
+            <span>X</span> <span id="highlight-ax">N/A</span>
+          </div>
+          <div class="highlight-row">
+            <span>Y</span> <span id="highlight-ay">N/A</span>
+          </div>
+          <div class="highlight-row">
+            <span>Z</span> <span id="highlight-az">N/A</span>
+          </div>
+          <div class="highlight-status">
+            <span>Status</span> <span id="highlight-status">N/A</span>
+          </div>
+          <div class="highlight-timestamp">
+            <span>Timestamp</span> <span id="highlight-timestamp">N/A</span>
+          </div>
+        </div>
+
+        <!-- Sidebar Section -->
+
+        <div class="sidebar">
+          <img src="kucingrampok.png" alt="" />
+          <!-- <h2>Riwayat Data</h2> -->
+          <table>
+            <thead>
+              <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>Z</th>
+                <th>Status</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            <tbody id="data-table">
+              <!-- Table data will be populated dynamically -->
+            </tbody>
+          </table>
+          <!-- Pagination Controls -->
+          <div class="pagination">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn">Next</button>
+          </div>
+        </div>
+      </main>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
